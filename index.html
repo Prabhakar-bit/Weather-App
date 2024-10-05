@@ -9,25 +9,25 @@
     <div class="card">
         <div class="search">
             <input type="text" placeholder=" Enter city name" spellcheck="false">
-            <button><img src="search.png./photos/" ></button>
+            <button><img src="/photos/search.png." ></button>
         </div>
         <div class="error">
             <p>Invalid city name</p>
         </div>
         <div class="weather">
-            <img src="rain.png./photos/" class="weather-icon">
+            <img src="/photos/rain.png." class="weather-icon">
             <h1 class="temp">22°C</h1>
             <h2 class="city">New York</h2>
             <div class="details">
                 <div class="col">
-                    <img src="humidity.png./photos/">
+                    <img src="/photos/humidity.png.">
                     <div>
                         <p class="humidity">50%</p>
                         <p>humidity</p>
                     </div>
                 </div>
                 <div class="col">
-                    <img src="wind.png./photos/">
+                    <img src="/photos/wind.png.">
                     <div>
                         <p class="wind">15 km/h</p>
                         <p>Wind Speed</p>
@@ -58,19 +58,19 @@
             document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
            
             if(data.weather[0].main == "clouds"){
-                weatherIcon.src = "clouds.png./photos/";
+                weatherIcon.src = "/photos/clouds.png.";
             }
             else if(data.weather[0].main == "Clear"){
-                weatherIcon.src = "clear.png./photos/";
+                weatherIcon.src = "/photos/clear.png.";
             }
             else if(data.weather[0].main == "Rain"){
-                weatherIcon.src = "rain.png./photos/";
+                weatherIcon.src = "/photos/rain.png.";
             }
             else if(data.weather[0].main == "Drizzle"){
-                weatherIcon.src = "drizzle.png./photos/";
+                weatherIcon.src = "/photos/drizzle.png.";
             }
             else if(data.weather[0].main == "Mist"){
-                weatherIcon.src = "mist.png./photos/";
+                weatherIcon.src = "/photos/mist.png.";
             }
             document.querySelector(".weather").style.display = "Block";
         }
