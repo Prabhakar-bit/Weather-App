@@ -9,25 +9,25 @@
     <div class="card">
         <div class="search">
             <input type="text" placeholder=" Enter city name" spellcheck="false">
-            <button><img src="/photos/search.png." ></button>
+            <button><img src="./photos/search.png" ></button>
         </div>
         <div class="error">
             <p>Invalid city name</p>
         </div>
         <div class="weather">
-            <img src="/photos/rain.png." class="weather-icon">
+            <img src="./photos/rain.png" class="weather-icon">
             <h1 class="temp">22°C</h1>
             <h2 class="city">New York</h2>
             <div class="details">
                 <div class="col">
-                    <img src="/photos/humidity.png.">
+                    <img src="./photos/humidity.png">
                     <div>
                         <p class="humidity">50%</p>
                         <p>humidity</p>
                     </div>
                 </div>
                 <div class="col">
-                    <img src="/photos/wind.png.">
+                    <img src="./photos/wind.png">
                     <div>
                         <p class="wind">15 km/h</p>
                         <p>Wind Speed</p>
@@ -43,7 +43,7 @@
         const searchBtn =document.querySelector(".search Button");
         const weatherIcon=document.querySelector(".weather-icon");
         async function checkweather(city){
-            const response = await fetch(apiUrl + city +`&appid=${apikey}`);
+            const response = await fetch(apiUrl + city +&appid=${apikey});
             if(response.status==404){
                 document.querySelector(".error").style.display ="block";
                 document.querySelector(".weather").style.display ="none";
@@ -58,19 +58,19 @@
             document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
            
             if(data.weather[0].main == "clouds"){
-                weatherIcon.src = "/photos/clouds.png.";
+                weatherIcon.src = "./photos/clouds.png";
             }
             else if(data.weather[0].main == "Clear"){
-                weatherIcon.src = "/photos/clear.png.";
+                weatherIcon.src = "./photos/clear.png";
             }
             else if(data.weather[0].main == "Rain"){
-                weatherIcon.src = "/photos/rain.png.";
+                weatherIcon.src = "./photos/rain.png";
             }
             else if(data.weather[0].main == "Drizzle"){
-                weatherIcon.src = "/photos/drizzle.png.";
+                weatherIcon.src = "./photos/drizzle.png";
             }
             else if(data.weather[0].main == "Mist"){
-                weatherIcon.src = "/photos/mist.png.";
+                weatherIcon.src = "./photos/mist.png";
             }
             document.querySelector(".weather").style.display = "Block";
         }
